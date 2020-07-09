@@ -1,7 +1,7 @@
 # Script 6-strings guitar for Dark Souls
-Originally tuner from https://github.com/michniewicz/python-tuner
+Originally tuner from https://github.com/michniewicz/python-tuner🎵
 
-### References
+### References🎶
 https://en.wikipedia.org/wiki/Guitar_tunings
 
 https://newt.phys.unsw.edu.au/jw/notes.html
