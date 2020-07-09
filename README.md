@@ -12,5 +12,7 @@ https://newt.phys.unsw.edu.au/jw/notes.html
 2. Then just run ```controller.py```!
 
 E4 - Move forward
+
 G4 - Look Left
+
 A4 - Look Right
