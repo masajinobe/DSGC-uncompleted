@@ -10,3 +10,7 @@ https://newt.phys.unsw.edu.au/jw/notes.html
 1. Make sure your `line in` you plug your guitar works correctly.
 
 2. Then just run ```controller.py```!
+
+E4 - Move forward
+G4 - Look Left
+A4 - Look Right
