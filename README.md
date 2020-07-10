@@ -12,6 +12,6 @@ https://newt.phys.unsw.edu.au/jw/notes.html
 #### Using
 1. Make sure your `line in` you plug your guitar works correctly.
 
-2. Then just run `DSguitar.exe` or `DSguitar.py`!
+2. Then just run `DSGC.exe` or `DSGC.py`!
 
 3. If you want to tune your guitar, then run tuner.exe😂
