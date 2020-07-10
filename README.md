@@ -12,6 +12,10 @@ https://newt.phys.unsw.edu.au/jw/notes.html
 #### Using
 1. Make sure your `line in` you plug your guitar works correctly.
 
-2. Then just run `DSGC.exe` or `DSGC.py`!
+2. Configure the input channel in `settings.ini`. Input channel number can be found in `index.exe`.
 
-3. If you want to tune your guitar, then run tuner.exe😂
+3. To reduce the delay, you can change the `FSAMP`, `FRAME_SIZE`, and `FRAMES_PER_FFT` values.
+
+4. Then just run `DSGC.exe` or `DSGC.py`!
+
+5. If you want to tune your guitar, then run `tuner.exe`😂
