@@ -35,6 +35,10 @@ def key_control(n0):
         pydirectinput.move(-20, 0)
         print('G4 - Look Left')
 
+    if n0 == 63:
+        pydirectinput.click()
+        print('D#4 - Click!')
+
     if n0 == 69:
         pydirectinput.move(20, 0)
         print('A4 - Look Right')
