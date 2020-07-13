@@ -18,7 +18,8 @@ FRAME_SIZE = int(config.get('settings', 'FRAME_SIZE'))
 # FFT takes average across how many frames?
 FRAMES_PER_FFT = int(config.get('settings', 'FRAMES_PER_FFT'))
 
-channel = int(config.get('settings', 'channel'))
+# Input channel
+Channel = int(config.get('settings', 'channel'))
 
 ######################################################################
 # Derived quantities from constants above. Note that as
@@ -45,8 +46,8 @@ def freq_to_number(f): return 83 + 12 * np.log2(f / 987.77)
 def number_to_freq(n): return 987.77 * 2.0**((n - 83) / 12.0)
 
 
-def note_name(n):
-    return NOTE_NAMES[n % NOTE_MIN % len(NOTE_NAMES)] + str(int(n / 12 - 1))
+def note_name(n): return NOTE_NAMES[n % NOTE_MIN %
+                                    len(NOTE_NAMES)] + str(int(n / 12 - 1))
 
 ######################################################################
 # Ok, ready to go now.
@@ -63,11 +64,10 @@ imax = min(SAMPLES_PER_FFT, int(np.ceil(note_to_fftbin(NOTE_MAX + 1))))
 
 # Allocate space to run an FFT.
 buf = np.zeros(SAMPLES_PER_FFT, dtype=np.float32)
-num_frames = 0
 
 # Initialize audio
 stream = pyaudio.PyAudio().open(format=pyaudio.paInt16,
-                                channels=channel,
+                                channels=Channel,
                                 rate=FSAMP,
                                 input=True,
                                 frames_per_buffer=FRAME_SIZE)
@@ -97,13 +97,6 @@ while stream.is_active():
     # Get note number and nearest note
     n = freq_to_number(freq)
     n0 = int(round(n))
-
-    # Debug
-    # num_frames += 1
-
-    # if num_frames >= FRAMES_PER_FFT:
-    #     print('number {:7.2f} freq: {:7.2f} Hz     note: {:>3s} {:+.2f}'.format(n,
-    #                                                                             freq, note_name(n0), n - n0))
 
     # Control
     key_control(n0)
