@@ -16,6 +16,4 @@ https://newt.phys.unsw.edu.au/jw/notes.html
 
 3. To reduce the delay, you can change the `FSAMP`, `FRAME_SIZE`, and `FRAMES_PER_FFT` values.
 
-4. Then just run `DSGC.exe` or `DSGC.py`!
-
-5. If you want to tune your guitar, then run `tuner.exe`😂
+4. Then just run `DSGC.exe`!
