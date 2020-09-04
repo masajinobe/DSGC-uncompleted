@@ -17,7 +17,6 @@ FSAMP = int(config.get('settings', 'FSAMP'))
 FRAME_SIZE = int(config.get('settings', 'FRAME_SIZE'))
 # FFT takes average across how many frames?
 FRAMES_PER_FFT = int(config.get('settings', 'FRAMES_PER_FFT'))
-
 # Input channel
 Channel = int(config.get('settings', 'channel'))
 
